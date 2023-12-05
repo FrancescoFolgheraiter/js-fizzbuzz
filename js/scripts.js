@@ -26,6 +26,22 @@ console.log(list);
 for(let i = 0; i < 100 ; i++){
     const numero = document.createElement("li");
     numero.classList.add("mb-3");
-    numero.append(i + 1);
-    list.append(numero);
+    console.log(i);
+    //controllo multipli di 3 e 5 in contemporanea
+    if ((((i + 1) % 3) == 0) && (((i + 1) % 5) == 0)){
+        numero.append("FizzBuzz");
+        list.append(numero);
+    }
+    else if (((i + 1) % 3) == 0){
+        numero.append("Fizz");
+        list.append(numero);
+    }
+    else if (((i + 1) % 5) == 0){
+        numero.append("Buzz");
+        list.append(numero);
+    }
+    else{
+        numero.append(i + 1);
+        list.append(numero);
+    }   
 }
