@@ -23,3 +23,16 @@ html{
     height:100px;
 }
 
+/*utility*/
+.bg-main-color{
+    background-color: var(--main-color);
+}
+.bg-second-color{
+    background-color: var(--second-color);
+}
+.bg-third-color{
+    background-color: var(--third-color);
+}
+.bg-foruth-color{
+    background-color: var(--fourth-color);
+}
