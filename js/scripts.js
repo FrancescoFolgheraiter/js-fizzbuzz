@@ -21,7 +21,11 @@ Punti
     -multipli di 5 stampi "Buzz"
     -multipli di 3 che di 5 stampi "FizzBuzz"
 */
-
+const list = document.getElementById("number-list");
+console.log(list);
 for(let i = 0; i < 100 ; i++){
-    console.log(i + 1);
+    const numero = document.createElement("li");
+    numero.classList.add("mb-3");
+    numero.append(i + 1);
+    list.append(numero);
 }
