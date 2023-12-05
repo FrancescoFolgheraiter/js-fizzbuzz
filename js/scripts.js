@@ -21,27 +21,36 @@ Punti
     -multipli di 5 stampi "Buzz"
     -multipli di 3 che di 5 stampi "FizzBuzz"
 */
-const list = document.getElementById("number-list");
-console.log(list);
+let row = document.querySelector(".row");
+// const list = document.getElementById("number-list");
+// console.log(list);
 for(let i = 0; i < 100 ; i++){
-    const numero = document.createElement("li");
-    numero.classList.add("mb-3");
+    const colonna = document.createElement("div");
+    colonna.classList.add("col");
+    const card = document.createElement("div");
+    card.classList.add("square");
+    colonna.append(card)
     console.log(i);
+    console.log(colonna);
+    console.log(card);
+    row.append(colonna);
+  
     //controllo multipli di 3 e 5 in contemporanea
     if ((((i + 1) % 3) == 0) && (((i + 1) % 5) == 0)){
-        numero.append("FizzBuzz");
-        list.append(numero);
-    }
+        card.append("FizzBuzz");
+        row.append(colonna);
+    } //controllo multipli di 3
     else if (((i + 1) % 3) == 0){
-        numero.append("Fizz");
-        list.append(numero);
-    }
+        card.append("Fizz");
+        row.append(colonna);
+    } //controllo multipli di 5
     else if (((i + 1) % 5) == 0){
-        numero.append("Buzz");
-        list.append(numero);
+        card.append("Buzz");
+        row.append(colonna);
     }
     else{
-        numero.append(i + 1);
-        list.append(numero);
-    }   
+        card.append(i + 1);
+        row.append(colonna);
+    }
+     
 }
