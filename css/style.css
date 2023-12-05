@@ -1,22 +1,22 @@
 /*
+    ROOT
+*/
+:root{
+    --bg-body-color:#083b4c;
+    --main-color:#1389b2;
+    --second-color:#0cd6a1;
+    --third-color:#ffd166;
+    --fourth-color:#f0466f;
+}
+/*
     RESET
 */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+html{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*
     GENERAL
 */
 
-html{
-    font-family: Arial, Helvetica, sans-serif;
-}
 
-.container{
-    width: 1200px;
-    margin: 0 auto;
-}
