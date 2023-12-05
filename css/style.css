@@ -36,3 +36,6 @@ html{
 .bg-foruth-color{
     background-color: var(--fourth-color);
 }
+.sfondo{
+    background-color: var(--bg-body-color);
+}

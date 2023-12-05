@@ -27,17 +27,17 @@ let row = document.querySelector(".row");
 // console.log(list);
 for(let i = 0; i < 100 ; i++){
     const colonna = document.createElement("div");
-    colonna.classList.add("col-auto");
+    colonna.classList.add("col-auto", "mb-3");
     const card = document.createElement("div");
-    card.classList.add("square");
+    card.classList.add("square","d-flex","justify-content-center", "align-items-center");
     const contenuto = document.createElement("div");
+    contenuto.classList.add("fw-bold");
     colonna.append(card);
     card.append(contenuto);
     console.log(i);
     console.log(colonna);
     console.log(card);
     row.append(colonna);
-    colonna.classList.add("mb-2")
   
     //controllo multipli di 3 e 5 in contemporanea
     if ((((i + 1) % 3) == 0) && (((i + 1) % 5) == 0)){
