@@ -23,8 +23,6 @@ Punti
 */
 let row = document.querySelector(".row");
 
-// const list = document.getElementById("number-list");
-// console.log(list);
 for(let i = 0; i < 100 ; i++){
     const colonna = document.createElement("div");
     colonna.classList.add("col-auto", "mb-3");
@@ -34,31 +32,24 @@ for(let i = 0; i < 100 ; i++){
     contenuto.classList.add("fw-bold");
     colonna.append(card);
     card.append(contenuto);
-    console.log(i);
-    console.log(colonna);
-    console.log(card);
     row.append(colonna);
   
     //controllo multipli di 3 e 5 in contemporanea
     if ((((i + 1) % 3) == 0) && (((i + 1) % 5) == 0)){
         contenuto.append("FizzBuzz");
-        row.append(colonna);
         card.classList.add("bg-foruth-color");
     } //controllo multipli di 3
     else if (((i + 1) % 3) == 0){
         contenuto.append("Fizz");
-        row.append(colonna);
         card.classList.add("bg-second-color");
 
     } //controllo multipli di 5
     else if (((i + 1) % 5) == 0){
         contenuto.append("Buzz");
-        row.append(colonna);
         card.classList.add("bg-third-color");
     }
     else{
         contenuto.append(i + 1);
-        row.append(colonna);
         card.classList.add("bg-main-color");
     }
      
